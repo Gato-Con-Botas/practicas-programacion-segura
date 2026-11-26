@@ -16,15 +16,12 @@ if (!isset($_SESSION['user'])) {
 </head>
 <body class="container mt-3">
     <h2>Lista de estudiantes <small class="text-muted fs-5">Universidad Veracruzana</small></h2>
-    
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">Inicio</li>
         </ol>
     </nav>
-    
     <p>Haga clic en el vínculo Ver datos para ver la información completa de un estudiante.</p>
-    
     <table class="table table-sm table-striped table-bordered">
         <thead>
             <tr>
@@ -61,10 +58,6 @@ if (!isset($_SESSION['user'])) {
             </tr>
         </tbody>
     </table>
-    
-    <p>
-        <span class="badge text-bg-primary">Usuario: <?php echo $_SESSION['user']; ?></span> 
-        <a href="salir.php">Cerrar sesión</a>
-    </p>
+    <p><span class="badge text-bg-primary">Usuario: <?php echo $_SESSION['user']; ?></span> <a href="salir.php">Cerrar sesión</a></p>
 </body>
 </html>

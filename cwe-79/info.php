@@ -15,56 +15,25 @@ if (!isset($_SESSION['user'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="container mt-3">
-    <h2>Lista de estudiantes <small class="text-muted fs-5">Universidad Veracruzana</small></h2>
-    
+    <h2>Datos del estudiante <small class="text-muted fs-5">Universidad Veracruzana</small></h2>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+            <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Información</li>
         </ol>
     </nav>
-    
-    <p>Haga clic en el vínculo Ver datos para ver la información completa de un estudiante.</p>
-    
-    <table class="table table-sm table-striped table-bordered">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Información</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Roberto Sánchez</td>
-                <td><a href="info.php?id=1">Ver datos</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Lorena Ochoa</td>
-                <td><a href="info.php?id=2">Ver datos</a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Luis Hernández</td>
-                <td><a href="info.php?id=3">Ver datos</a></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Susana Ramírez</td>
-                <td><a href="info.php?id=4">Ver datos</a></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Gabriela López</td>
-                <td><a href="info.php?id=5">Ver datos</a></td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <p>
-        <span class="badge text-bg-primary">Usuario: <?php echo $_SESSION['user']; ?></span> 
-        <a href="salir.php">Cerrar sesión</a>
-    </p>
+    <p>A continuación se muestran los datos del estudiante.</p>
+    <div class="card mb-2">
+        <div class="card-header">
+            Datos del estudiante
+        </div>
+        <div class="card-body">
+            <p><strong>Id:</strong> <?php echo $_GET["id"]; ?></p>
+            <p><strong>Nombre:</strong> Roberto Sánchez</p>
+            <p><strong>Edad:</strong> 22 años</p>
+            <p><strong>Facultad:</strong> Facultad de Estadística e Informática</p>
+        </div>
+    </div>
+    <p><span class="badge text-bg-primary">Usuario: <?php echo $_SESSION['user']; ?></span> <a href="salir.php">Cerrar sesión</a></p>
 </body>
 </html>

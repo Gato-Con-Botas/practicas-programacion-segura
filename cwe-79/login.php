@@ -25,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="card mx-auto mt-3">
                 <div class="card-body">
                     <h5 class="card-card-title text-center">Inicio de sesión</h5>
-                    
                     <div class="mb-3">
                         <label for="username" class="form-label">Usuario</label>
                         <input type="text" class="form-control" name="username" placeholder="Escriba el usuario">
@@ -33,13 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <span class="text-danger">Credenciales incorrectas</span>
                         <?php endif; ?>
                     </div>
-                    
                     <div class="mb-3">
                         <label class="form-label" for="password">Contraseña</label>
                         <input class="form-control" type="password" name="password" placeholder="Escriba su contraseña">
                     </div>
                 </div>
-                
                 <div class="card-footer text-center">
                     <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                 </div>
