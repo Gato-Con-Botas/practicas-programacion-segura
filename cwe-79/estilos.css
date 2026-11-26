@@ -1,8 +1,0 @@
-.contenedor-login {
-    margin-top: 50px;
-    display: grid;
-    place-items: center stretch;
-}
-.contenedor-login .card {
-    max-width: 500px;
-}
